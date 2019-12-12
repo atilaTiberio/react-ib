@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MyComponent from './App';
+import MainComponent from './App';
 
-ReactDOM.render(<MyComponent isValid={true}/>, document.getElementById('root'));
+ReactDOM.render(<MainComponent />, document.getElementById('root'));
