@@ -36,7 +36,7 @@ function Content() {
 
     const parentHandler = (todoId) => {
         const localTodos = [...todos];
-        const todoRemoved = localTodos.filter(todo => todo.id != todoId);
+        const todoRemoved = localTodos.filter(todo => todo.id !== todoId);
         setTodos(todoRemoved)
         localStorage.setItem("list", JSON.stringify(todoRemoved));
     }
@@ -52,6 +52,7 @@ function Content() {
                        name="title"
                        onChange={e => setTitle(e.target.value)}
                        className="input-group-sm"
+                       required
                 />
 
                 <input
@@ -61,7 +62,7 @@ function Content() {
                     name="todo"
                     onChange={e => setTodo(e.target.value)}
                     className="input-group-sm"
-
+                    required
                 />
                 <button className="btn btn-primary" type="submit">Agregar</button>
             </form>
