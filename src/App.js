@@ -1,16 +1,25 @@
 import React from 'react';
-import Header from './components/Header'
-import Content from './components/Content'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './components/Navbar'
+import 'materialize-css/dist/css/materialize.min.css'
+import {BrowserRouter, Route} from 'react-router-dom'
+import Home from "./components/Home";
+import Contact from "./components/Contact";
+import About from "./components/About";
+import Content from "./components/Content";
 
 const MainComponent = () => {
 
     return (
+        <BrowserRouter>
+            <div className="App">
+                <Navbar/>
+                <Route path='/home' component={Home}/>
+                <Route path='/content' component={Content}/>
+                <Route path='/about' component={About}/>
+                <Route path='/contact' component={Contact}/>
 
-        <div>
-            <Header/>
-            <Content/>
-        </div>
+            </div>
+        </BrowserRouter>
 
     )
 }

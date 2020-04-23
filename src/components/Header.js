@@ -5,7 +5,9 @@ const Header =() =>{
 
 
     return(
-        <header className="card-header">Todo List</header>
+        <div className="container">
+            <h4 className="center">Todo list</h4>
+        </div>
     )
 }
 

@@ -1,6 +1,7 @@
 import React, {useState, useRef, useEffect} from "react";
 
 import ContentTodoList from './ContentTodoList'
+import Header from "./Header";
 
 function Content() {
 
@@ -42,7 +43,9 @@ function Content() {
     }
 
     return (
-        <div>
+        <div className="container">
+
+            <Header/>
             <form onSubmit={submitHandler}>
 
                 <input ref={titleRef}
