@@ -7,6 +7,10 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import Content from "./components/Content";
 
+
+/*
+* https://jsonplaceholder.typicode.com
+* */
 const MainComponent = () => {
 
     return (
