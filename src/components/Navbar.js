@@ -8,7 +8,7 @@ const Navbar = () => {
             <div className="container">
                 <a href="#?" className="brand-logo"> Training with React </a>
                 <ul className="right">
-                    <NavItem exact to='/home' anyOther={"test"}>Home</NavItem>
+                    <NavItem exact to='/' anyOther={"test"}>Home</NavItem>
                     <NavItem to='/content'>Content</NavItem>
                     <NavItem to='/about'>About</NavItem>
                     <NavItem to='/contact'>Contact</NavItem>
