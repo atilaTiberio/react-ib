@@ -13,8 +13,8 @@ import Post from './components/Post'
 * https://jsonplaceholder.typicode.com
 * */
 const MainComponent = () => {
-
     return (
+
         <BrowserRouter>
             <div className="App">
                 <Navbar/>

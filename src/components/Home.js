@@ -1,24 +1,25 @@
 import React, {Component} from 'react'
-import axios from 'axios'
 import {Link} from "react-router-dom"
 import Pokeball from '../pokeball.png'
+import {connect} from 'react-redux'
+import {fetchPosts} from "../actions/postActions";
+import axios from 'axios';
+
 class Home extends Component{
 
-    state = {
+  /*  state = {
         posts: []
     }
-
+*/
     componentDidMount() {
         axios.get('https://jsonplaceholder.typicode.com/posts')
             .then(res => {
-                this.setState({
-                    posts: res.data.slice(0,10)
-                })
+                this.props.fetchPosts(res.data.slice(0,10))
             })
     }
 
     render() {
-        const {posts} = this.state;
+        const {posts} = this.props;
         const postList= posts.length ? (
             posts.map(post => {
                 return (
@@ -45,4 +46,20 @@ class Home extends Component{
     }
 }
 
-export default Home;
+//This will tell to redux what things of the store we want to grab
+const mapStateToProps = (state)=> {
+
+    return {
+        posts: state.posts
+    }
+
+}
+
+const mapDispatchToProps = (dispatch)=> {
+    return {
+        fetchPosts: (posts) => {dispatch (fetchPosts(posts))}
+    }
+
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Home);
