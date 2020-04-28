@@ -20,6 +20,7 @@ class Post extends Component {
 
    handleClick = () => {
        this.props.deletePost(this.props.post.id);
+       //TODO to call the delete endpoint
        this.props.history.push('/')
 
    }
