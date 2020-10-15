@@ -12,6 +12,7 @@ const Navbar = () => {
                     <NavItem to='/content'>Content</NavItem>
                     <NavItem to='/about'>About</NavItem>
                     <NavItem to='/contact'>Contact</NavItem>
+                    <NavItem to='/NewForm'>NewForm</NavItem>
                 </ul>
             </div>
         </nav>

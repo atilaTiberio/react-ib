@@ -8,10 +8,12 @@ import Contact from './components/Contact'
 import About from './components/About'
 import Content from './components/Content'
 import Post from './components/Post'
+import NewForm from "./components/NewForm";
 
 /*
 * https://jsonplaceholder.typicode.com
 * */
+
 const MainComponent = () => {
     return (
 
@@ -23,7 +25,9 @@ const MainComponent = () => {
                     <Route path='/content' component={Content}/>
                     <Route path='/about' component={About}/>
                     <Route path='/contact' component={Contact}/>
+                    <Route path='/newForm' component={NewForm} />
                     <Route path='/:post_id' component={Post} />
+
                 </Switch>
             </div>
         </BrowserRouter>
